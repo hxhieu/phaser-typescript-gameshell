@@ -1,29 +1,28 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <Game />
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import HelloWorld from "./components/HelloWorld.vue";
+import { Component, Vue } from 'vue-property-decorator'
+
+const Game = () => import(/* webpackChunkName: "component-game" */ '@/components/Game.vue')
 
 @Component({
   components: {
-    HelloWorld
-  }
+    Game,
+  },
 })
 export default class App extends Vue {}
 </script>
 
 <style lang="scss">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
