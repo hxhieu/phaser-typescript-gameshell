@@ -1,4 +1,4 @@
-# garden-wars
+# phaser-typescript-gameshell
 
 ## Project setup
 ```
