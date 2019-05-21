@@ -7,7 +7,7 @@ export class Main extends Phaser.Game {
   private static _game: Phaser.Game
   static start() {
     //TODO: Proper scale
-    const scale = 2
+    const scale = 1
     this._game = new Phaser.Game({
       title: 'Garden Wars',
       width: screenSize.width,
