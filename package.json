@@ -1,32 +1,40 @@
 {
-  "name": "garden-wars",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
+  "name": "phaser3-project-template",
+  "description": "A Phaser 3 Project Template",
+  "version": "1.0.0",
+  "author": "Hugh Hoang <hugh.hoang@gmail.com>",
   "dependencies": {
-    "core-js": "^2.6.5",
-    "phaser": "^3.17.0",
-    "vue": "^2.6.10",
-    "vue-class-component": "^7.0.2",
-    "vue-property-decorator": "^8.1.0"
+    "phaser": "^3.17.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.7.0",
-    "@vue/cli-plugin-eslint": "^3.7.0",
-    "@vue/cli-plugin-typescript": "^3.7.0",
-    "@vue/cli-service": "^3.7.0",
-    "@vue/eslint-config-prettier": "^4.0.1",
-    "@vue/eslint-config-typescript": "^4.0.0",
-    "babel-eslint": "^10.0.1",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@typescript-eslint/eslint-plugin": "^1.9.0",
+    "@typescript-eslint/parser": "^1.9.0",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^2.0.1",
+    "copy-webpack-plugin": "^5.0.1",
     "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "sass": "^1.18.0",
-    "sass-loader": "^7.1.0",
-    "typescript": "^3.4.3",
-    "vue-template-compiler": "^2.5.21"
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "prettier": "^1.17.1",
+    "raw-loader": "^2.0.0",
+    "terser-webpack-plugin": "^1.2.1",
+    "ts-loader": "^6.0.1",
+    "typescript": "^3.3.4000",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.2.1"
+  },
+  "license": "UNLICENSED",
+  "main": "src/main.ts",
+  "scripts": {
+    "build": "webpack --progress --config webpack/prod.js ",
+    "deploy": "yarn build && asar pack dist app.asar && scp ./app.asar 192.168.0.28:/home/cpi/games/test-bed/resources",
+    "serve": "yarn start",
+    "start": "webpack-dev-server --config webpack/base.js"
   }
 }

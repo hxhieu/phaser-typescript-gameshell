@@ -1,0 +1,2 @@
+#LD_LIBRARY_PATH=/home/cpi/apps/nwjs-sdk-v0.27.6-linux-arm/lib /home/cpi/apps/nwjs-sdk-v0.27.6-linux-arm/nw /home/cpi/games/test-bed --use-gl=egl --ignore-gpu-blacklist --disable-accelerated-2d-canvas --num-raster-threads=4
+/home/cpi/games/test-bed/electron
