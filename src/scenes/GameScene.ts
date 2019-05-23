@@ -1,4 +1,4 @@
-import { Logo } from '@/objects/Logo'
+import { TestMap } from '@/objects/TestMap'
 import { BaseScene } from './BaseScene'
 
 export class GameScene extends BaseScene {
@@ -9,6 +9,6 @@ export class GameScene extends BaseScene {
   }
 
   create() {
-    const logo = new Logo(this)
+    new TestMap(this)
   }
 }

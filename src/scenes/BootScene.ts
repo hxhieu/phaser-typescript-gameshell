@@ -10,7 +10,7 @@ export class BootScene extends BaseScene {
 
   preload() {
     // load out package
-    this.load.image('logo', require('../assets/logo.png'))
+    this.load.image('map_01', require('../assets/map_01.png'))
   }
 
   create() {

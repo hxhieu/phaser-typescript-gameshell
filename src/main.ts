@@ -6,8 +6,6 @@ import { GameScene } from './scenes/GameScene'
 // game class
 export class Game extends Phaser.Game {
   constructor() {
-    //TODO: Proper scale
-    const scale = 1
     super({
       title: 'Garden Wars',
       width: screenSize.width,
@@ -17,8 +15,6 @@ export class Game extends Phaser.Game {
       scale: {
         parent: 'game',
         mode: Phaser.Scale.FIT,
-        width: screenSize.width * scale,
-        height: screenSize.height * scale,
       },
     })
     this.scene.add('BootScene', BootScene)
